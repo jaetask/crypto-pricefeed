@@ -28,7 +28,6 @@ export const priceFeedCoinGecko = async (tokens: Tokens = [FTM], outputCurrencie
     const tokenString = tokens.map((token) => token.identifier).join(',');
     const currencies = outputCurrencies.map((currency) => currency.identifier).join(',');
     const url = `https://api.coingecko.com/api/v3/simple/price?ids=${tokenString}&vs_currencies=${currencies}`;
-    console.log('url', url);
 
     const response = await axios.get(url);
     if (Number(response.status) === 200) {
@@ -39,12 +38,3 @@ export const priceFeedCoinGecko = async (tokens: Tokens = [FTM], outputCurrencie
     console.error(error);
   }
 };
-
-// priceFeedCoinGecko([FTM, USDC])
-//   .then((prices) => {
-//     console.log('prices', prices);
-//   })
-//   .catch((error) => {
-//     console.log('error.stack', error.stack);
-//     process.exit(1);
-//   });
