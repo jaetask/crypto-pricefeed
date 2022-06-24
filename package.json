@@ -1,5 +1,5 @@
 {
-  "name": "crypto-pricefeed",
+  "name": "@jaetask/crypto-pricefeed",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",

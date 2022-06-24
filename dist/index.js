@@ -58,7 +58,6 @@ var priceFeedCoinGecko = function (tokens, outputCurrencies) {
                     tokenString = tokens.map(function (token) { return token.identifier; }).join(',');
                     currencies = outputCurrencies.map(function (currency) { return currency.identifier; }).join(',');
                     url = "https://api.coingecko.com/api/v3/simple/price?ids=".concat(tokenString, "&vs_currencies=").concat(currencies);
-                    console.log('url', url);
                     return [4 /*yield*/, axios.get(url)];
                 case 1:
                     response = _a.sent();
@@ -76,11 +75,3 @@ var priceFeedCoinGecko = function (tokens, outputCurrencies) {
     });
 };
 exports.priceFeedCoinGecko = priceFeedCoinGecko;
-// priceFeedCoinGecko([FTM, USDC])
-//   .then((prices) => {
-//     console.log('prices', prices);
-//   })
-//   .catch((error) => {
-//     console.log('error.stack', error.stack);
-//     process.exit(1);
-//   });
