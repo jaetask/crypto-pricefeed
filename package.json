@@ -1,0 +1,31 @@
+{
+  "name": "crypto-pricefeed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "tsc --outDir dist src/*.ts",
+    "debug": "ts-node src/index.ts",
+    "runner": "ts-node scripts/runner.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [],
+  "author": "Jae Task",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120,
+    "tabWidth": 2
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
